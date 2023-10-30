@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="description" content="Text">
+    <title>AI Studio News</title>
+    <meta name="theme-color" content="#201F1A">
+    <link rel="icon" type="image/png" href="assets/images/png/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/png/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+  <link href="assets/css/app.css?v=1698648908339" rel="stylesheet"></head>
+  <body>
+<div class="preloader">
+  <div class="preloader-logo logo">
+    <p>Newswire<span>Newswire</span></p>
+  </div>
+  <div class="preloader-line">
+    <div class="preloader-loading"></div>
+  </div>
+</div>
+<script>
+  let preloader = document.querySelector('.preloader');
+  if (!(document.referrer.indexOf('test-ai') == -1) || !(location.href.indexOf('localhost') == -1)) {
+  	preloader.remove();
+  }
+  
+  
+  setTimeout(function () {
+  	if (preloader) {
+  		setTimeout(function () {
+  			preloader.classList.add('preloader--hide');
+  		}, 2000);
+  
+  		setTimeout(function () {
+  			preloader.style.display = 'none';
+  		}, 3800);
+  	}
+  }, 500);
+</script>
+<header class="header">
+  <div class="center-wrap">
+    <div class="header__wrap">
+      <nav class="header__nav mobile--hide">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a class="header__nav-link" href="/">Categories</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="/test-ai/events.html">Events</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="/test-ai/news.html">News</a></li>
+        </ul>
+      </nav><a class="header__logo single-anchors logo" href="index.html#home" aria-label="Logo">
+        <p>Newswire<span>Newswire</span></p></a>
+      <div class="header__right mobile--hide">
+        <div class="header__search">
+          <form class="inputs inputs--search" action="/action_page.php" autocomplete="off">
+            <div class="inputs__btn">
+              <button class="btn" type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" fill="none">
+                  <path d="M1.146 9.62498C1.146 4.94208 4.94227 1.14581 9.62516 1.14581C14.3081 1.14581 18.1043 4.94208 18.1043 9.62498C18.1043 14.3079 14.3081 18.1041 9.62516 18.1041C4.94227 18.1041 1.146 14.3079 1.146 9.62498ZM9.62516 2.52081C5.70166 2.52081 2.521 5.70148 2.521 9.62498C2.521 13.5485 5.70166 16.7291 9.62516 16.7291C13.5487 16.7291 16.7293 13.5485 16.7293 9.62498C16.7293 5.70148 13.5487 2.52081 9.62516 2.52081Z"></path>
+                  <path d="M6.5463 6.08775C7.33353 5.30057 8.423 4.81248 9.62516 4.81248C10.8273 4.81248 11.9168 5.30057 12.704 6.08776C12.9725 6.35625 12.9725 6.79155 12.704 7.06004C12.4355 7.32852 12.0002 7.32852 11.7317 7.06004C11.1919 6.52017 10.448 6.18748 9.62516 6.18748C8.80231 6.18748 8.05846 6.52017 7.51854 7.06005C7.25004 7.32853 6.81474 7.32851 6.54626 7.06002C6.27779 6.79152 6.2778 6.35622 6.5463 6.08775Z"></path>
+                  <path d="M14.7407 14.7405C15.0092 14.472 15.4445 14.472 15.713 14.7405L19.6021 18.6296C19.8705 18.8981 19.8705 19.3334 19.6021 19.6019C19.3336 19.8704 18.8983 19.8704 18.6298 19.6019L14.7407 15.7128C14.4722 15.4443 14.4722 15.009 14.7407 14.7405Z"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="inputs__field-wrap">
+              <input class="inputs__field" type="text" placeholder="Search" name="text" autocomplete="off" required="" minlength="2">
+            </div>
+          </form>
+        </div>
+        <div class="header__registration"> 
+          <div class="header__registration-item">Sing up</div>
+          <div class="header__registration-item">Login</div>
+        </div>
+      </div>
+      <div class="header__burger desktop--hide"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 12H21M3 6H21M3 18H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+      </div>
+    </div>
+  </div>
+</header>
+    <main>
+      <section class="main-screen at-block">
+        <div class="main-screen__wrap">
+          <picture>
+            <source srcset="assets/images/png/main-screen-img.webp" type="image/webp"><img class="main-screen__bg" src="assets/images/png/main-screen-img.png" alt="">
+          </picture>
+          <div class="center-wrap">
+            <h2 class="simple-title simple-title--center at-element" data-at-name="atCustom" data-at-duration="2" data-at-direction="y" data-at-distance="20">News</h2>
+          </div>
+        </div>
+      </section>
+<div class="news at-block">
+  <div class="center-wrap">
+    <div class="news__wrap at-element" data-at-name="atItemsRowTrigger" data-at-selector=".posts-one" data-at-start="top bottom" data-at-end="top center" data-at-rows="2" data-at-point1="40" data-at-point2="0">
+      <div class="posts-one posts-one--absolute">
+        <div class="posts-one__img img-wrap">
+          <div>
+            <picture>
+              <source srcset="assets/images/png/posts-one__img8.webp" type="image/webp"><img src="assets/images/png/posts-one__img8.png" alt="">
+            </picture>
+          </div>
+        </div>
+        <div class="posts-one__info">
+          <div class="posts-one__categorys">
+            <div class="posts-category posts-category--color">City</div>
+            <div class="posts-category posts-category--color">Ukraine</div>
+          </div>
+          <div class="posts-one__title">Zhytomyr survived the winter blackouts better than other big cities.</div>
+          <div class="posts-one__date">05/10/2023</div>
+        </div>
+      </div>
+      <div class="posts-one posts-one--absolute">
+        <div class="posts-one__img img-wrap">
+          <div>
+            <picture>
+              <source srcset="assets/images/png/posts-one__img9.webp" type="image/webp"><img src="assets/images/png/posts-one__img9.png" alt="">
+            </picture>
+          </div>
+        </div>
+        <div class="posts-one__info">
+          <div class="posts-one__categorys">
+            <div class="posts-category posts-category--color">News</div>
+            <div class="posts-category posts-category--color">Games</div>
+          </div>
+          <div class="posts-one__title">Microsoft closed the deal to acquire Activision for $69 billion.</div>
+          <div class="posts-one__date">23/10/2023</div>
+        </div>
+      </div>
+      <div class="posts-one posts-one--absolute">
+        <div class="posts-one__img img-wrap">
+          <div>
+            <picture>
+              <source srcset="assets/images/png/posts-one__img10.webp" type="image/webp"><img src="assets/images/png/posts-one__img10.png" alt="">
+            </picture>
+          </div>
+        </div>
+        <div class="posts-one__info">
+          <div class="posts-one__categorys">
+            <div class="posts-category posts-category--color">News</div>
+            <div class="posts-category posts-category--color">Education</div>
+          </div>
+          <div class="posts-one__title">During the invasion, the proportion of people who read books every day doubled.</div>
+          <div class="posts-one__date">12/10/2023</div>
+        </div>
+      </div>
+      <div class="posts-one posts-one--absolute">
+        <div class="posts-one__img img-wrap">
+          <div>
+            <picture>
+              <source srcset="assets/images/png/posts-one__img11.webp" type="image/webp"><img src="assets/images/png/posts-one__img11.png" alt="">
+            </picture>
+          </div>
+        </div>
+        <div class="posts-one__info">
+          <div class="posts-one__categorys">
+            <div class="posts-category posts-category--color">Tech</div>
+            <div class="posts-category posts-category--color">World</div>
+          </div>
+          <div class="posts-one__title">OpenAI plans to release an update for developers of AI-powered applications.</div>
+          <div class="posts-one__date">03/10/2023</div>
+        </div>
+      </div>
+      <div class="posts-one posts-one--row"> 
+        <div class="posts-one__img img-wrap">
+          <div>
+            <picture>
+              <source srcset="assets/images/png/posts-one__img12.webp" type="image/webp"><img src="assets/images/png/posts-one__img12.png" alt="">
+            </picture>
+          </div>
+        </div>
+        <div class="posts-one__info">
+          <div class="posts-one__title">Demand for relaxation.</div>
+          <div class="posts-one__categorys">
+            <div class="posts-category posts-category--gray">News</div>
+            <div class="posts-category posts-category--gray">Business</div>
+          </div>
+          <div class="content">
+            <p>The picture-by-numbers market (yes, it exists and its volumes are impressive) continues to grow during the war. Stories of large manufacturers - Ideyka, Brushme and OKTO.</p>
+          </div>
+          <div class="posts-one__date">11/10/2023</div>
+        </div>
+      </div>
+      <div class="posts-one posts-one--row"> 
+        <div class="posts-one__img img-wrap">
+          <div>
+            <picture>
+              <source srcset="assets/images/png/posts-one__img13.webp" type="image/webp"><img src="assets/images/png/posts-one__img13.png" alt="">
+            </picture>
+          </div>
+        </div>
+        <div class="posts-one__info">
+          <div class="posts-one__title">Soft power. </div>
+          <div class="posts-one__categorys">
+            <div class="posts-category posts-category--gray">Education</div>
+            <div class="posts-category posts-category--gray">World</div>
+          </div>
+          <div class="content">
+            <p>Foreigners learn Ukrainian, order dumplings and borscht, and visit exhibitions of Ukrainian modernism. How the culture of Ukraine is moving around the world.</p>
+          </div>
+          <div class="posts-one__date">09/10/2023</div>
+        </div>
+      </div>
+      <div class="posts-one posts-one--row"> 
+        <div class="posts-one__img img-wrap">
+          <div>
+            <picture>
+              <source srcset="assets/images/png/posts-one__img14.webp" type="image/webp"><img src="assets/images/png/posts-one__img14.png" alt="">
+            </picture>
+          </div>
+        </div>
+        <div class="posts-one__info">
+          <div class="posts-one__title">Overtook Megogo.</div>
+          <div class="posts-one__categorys">
+            <div class="posts-category posts-category--gray">Business</div>
+            <div class="posts-category posts-category--gray">Tech</div>
+          </div>
+          <div class="content">
+            <p>Today, the number of users of the Kyivstar TV service exceeds 1 million, most of them pay for the service. Kyivstar president Oleksandr Komarov told about this in an interview.</p>
+          </div>
+          <div class="posts-one__date">08/10/2023</div>
+        </div>
+      </div>
+      <div class="posts-one posts-one--row"> 
+        <div class="posts-one__img img-wrap">
+          <div>
+            <picture>
+              <source srcset="assets/images/png/posts-one__img15.webp" type="image/webp"><img src="assets/images/png/posts-one__img15.png" alt="">
+            </picture>
+          </div>
+        </div>
+        <div class="posts-one__info">
+          <div class="posts-one__title">Starlink. SpaceX.</div>
+          <div class="posts-one__categorys">
+            <div class="posts-category posts-category--gray">Business</div>
+            <div class="posts-category posts-category--gray">Tech</div>
+          </div>
+          <div class="content">
+            <p>SpaceX announced the launch of a mobile service through Starlink, writes The Verge. Text messaging services will be available next year, followed by voice and data in 2025.</p>
+          </div>
+          <div class="posts-one__date">07/10/2023 </div>
+        </div>
+      </div>
+      <div class="posts-one posts-one--row"> 
+        <div class="posts-one__img img-wrap">
+          <div>
+            <picture>
+              <source srcset="assets/images/png/posts-one__img16.webp" type="image/webp"><img src="assets/images/png/posts-one__img16.png" alt="">
+            </picture>
+          </div>
+        </div>
+        <div class="posts-one__info">
+          <div class="posts-one__title">A record for three years. </div>
+          <div class="posts-one__categorys">
+            <div class="posts-category posts-category--gray">Ukraine</div>
+            <div class="posts-category posts-category--gray">Tech</div>
+          </div>
+          <div class="content">
+            <p>More than 26,000 natural persons – entrepreneurs are registered in Diya, which is a record number for the last three years. This was announced by the Deputy Prime Minister - Mykhailo Fedorov.</p>
+          </div>
+          <div class="posts-one__date">07/10/2023</div>
+        </div>
+      </div>
+      <div class="posts-one posts-one--row">   
+        <div class="posts-one__img img-wrap">
+          <div>
+            <picture>
+              <source srcset="assets/images/png/posts-one__img17.webp" type="image/webp"><img src="assets/images/png/posts-one__img17.png" alt="">
+            </picture>
+          </div>
+        </div>
+        <div class="posts-one__info">
+          <div class="posts-one__title">We is open for business.</div>
+          <div class="posts-one__categorys">
+            <div class="posts-category posts-category--gray">Business</div>
+            <div class="posts-category posts-category--gray">News</div>
+          </div>
+          <div class="content">
+            <p>Marsh, together with the Ukrainian government, is launching an information platform for investors. Broker Marsh, together with the government of Ukraine, is launching a platform for investors.</p>
+          </div>
+          <div class="posts-one__date">07/10/2023</div>
+        </div>
+      </div>
+      <div class="posts-one posts-one--row"> 
+        <div class="posts-one__img img-wrap">
+          <div>
+            <picture>
+              <source srcset="assets/images/png/posts-one__img18.webp" type="image/webp"><img src="assets/images/png/posts-one__img18.png" alt="">
+            </picture>
+          </div>
+        </div>
+        <div class="posts-one__info">
+          <div class="posts-one__title">It can happen again.</div>
+          <div class="posts-one__categorys">
+            <div class="posts-category posts-category--gray">World</div>
+            <div class="posts-category posts-category--gray">News</div>
+          </div>
+          <div class="content">
+            <p>Finland is on high alert because it suspects a gas pipeline leak in the Baltic Sea was caused by sabotage, raising concerns about the security of Europe's energy infrastructure, Bloomberg writes.</p>
+          </div>
+          <div class="posts-one__date">07/10/2023     </div>
+        </div>
+      </div>
+      <div class="posts-one posts-one--row"> 
+        <div class="posts-one__img img-wrap">
+          <div>
+            <picture>
+              <source srcset="assets/images/png/posts-one__img19.webp" type="image/webp"><img src="assets/images/png/posts-one__img19.png" alt="">
+            </picture>
+          </div>
+        </div>
+        <div class="posts-one__info">
+          <div class="posts-one__title">ExxonMobil.</div>
+          <div class="posts-one__categorys">
+            <div class="posts-category posts-category--gray">Business</div>
+            <div class="posts-category posts-category--gray">Tech</div>
+          </div>
+          <div class="content">
+            <p>The largest Western oil company ExxonMobil has agreed to buy Pioneer Natural Resources for $59.5 billion, which should trigger a wave of consolidation in the US shale oil industry.</p>
+          </div>
+          <div class="posts-one__date">07/10/2023 </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn">See more</div>
+  </div>
+</div>
+<section class="magazines-collections at-block">
+  <div class="center-wrap"> 
+    <h2 class="simple-title at-element" data-at-name="atCustom" data-at-duration="2" data-at-direction="y" data-at-distance="20">Magazines collections</h2>
+  </div>
+  <div class="magazines-collections__slider">	
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide at-element" data-at-name="atCustom" data-at-delay="0" data-at-duration="2" data-at-direction="y" data-at-distance="50">
+          <div class="magazines-collections__item">
+            <div class="magazines-collections__item-img img-wrap">
+              <div>
+                <picture>
+                  <source srcset="assets/images/png/magazines-collections__item-img1.webp" type="image/webp"><img src="assets/images/png/magazines-collections__item-img1.png" alt="">
+                </picture>
+              </div>
+            </div>
+            <div class="magazines-collections__item-info"> 
+              <div class="magazines-collections__item-title">Timeline</div>
+              <div class="magazines-collections__item-price">21$</div>
+              <div class="magazines-collections__item-btn btn">Buy</div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide at-element" data-at-name="atCustom" data-at-delay="0.5" data-at-duration="2" data-at-direction="y" data-at-distance="50">
+          <div class="magazines-collections__item">
+            <div class="magazines-collections__item-img img-wrap">
+              <div>
+                <picture>
+                  <source srcset="assets/images/png/magazines-collections__item-img2.webp" type="image/webp"><img src="assets/images/png/magazines-collections__item-img2.png" alt="">
+                </picture>
+              </div>
+            </div>
+            <div class="magazines-collections__item-info"> 
+              <div class="magazines-collections__item-title">Vogue</div>
+              <div class="magazines-collections__item-price">16$</div>
+              <div class="magazines-collections__item-btn btn">Buy</div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide at-element" data-at-name="atCustom" data-at-delay="1" data-at-duration="2" data-at-direction="y" data-at-distance="50">
+          <div class="magazines-collections__item">
+            <div class="magazines-collections__item-img img-wrap">
+              <div>
+                <picture>
+                  <source srcset="assets/images/png/magazines-collections__item-img3.webp" type="image/webp"><img src="assets/images/png/magazines-collections__item-img3.png" alt="">
+                </picture>
+              </div>
+            </div>
+            <div class="magazines-collections__item-info"> 
+              <div class="magazines-collections__item-title">Russh</div>
+              <div class="magazines-collections__item-price">18$</div>
+              <div class="magazines-collections__item-btn btn">Buy</div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide at-element" data-at-name="atCustom" data-at-delay="1.5" data-at-duration="2" data-at-direction="y" data-at-distance="50">
+          <div class="magazines-collections__item">
+            <div class="magazines-collections__item-img img-wrap">
+              <div>
+                <picture>
+                  <source srcset="assets/images/png/magazines-collections__item-img4.webp" type="image/webp"><img src="assets/images/png/magazines-collections__item-img4.png" alt="">
+                </picture>
+              </div>
+            </div>
+            <div class="magazines-collections__item-info"> 
+              <div class="magazines-collections__item-title">Rucksack</div>
+              <div class="magazines-collections__item-price">28$</div>
+              <div class="magazines-collections__item-btn btn">Buy</div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide at-element" data-at-name="atCustom" data-at-delay="2" data-at-duration="2" data-at-direction="y" data-at-distance="50">
+          <div class="magazines-collections__item">
+            <div class="magazines-collections__item-img img-wrap">
+              <div>
+                <picture>
+                  <source srcset="assets/images/png/magazines-collections__item-img5.webp" type="image/webp"><img src="assets/images/png/magazines-collections__item-img5.png" alt="">
+                </picture>
+              </div>
+            </div>
+            <div class="magazines-collections__item-info"> 
+              <div class="magazines-collections__item-title">Sculpture</div>
+              <div class="magazines-collections__item-price">25$</div>
+              <div class="magazines-collections__item-btn btn">Buy</div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide at-element" data-at-name="atCustom" data-at-delay="2.5" data-at-duration="2" data-at-direction="y" data-at-distance="50">
+          <div class="magazines-collections__item">
+            <div class="magazines-collections__item-img img-wrap">
+              <div>
+                <picture>
+                  <source srcset="assets/images/png/magazines-collections__item-img4.webp" type="image/webp"><img src="assets/images/png/magazines-collections__item-img4.png" alt="">
+                </picture>
+              </div>
+            </div>
+            <div class="magazines-collections__item-info"> 
+              <div class="magazines-collections__item-title">Rucksack</div>
+              <div class="magazines-collections__item-price">28$</div>
+              <div class="magazines-collections__item-btn btn">Buy</div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide at-element" data-at-name="atCustom" data-at-delay="3" data-at-duration="2" data-at-direction="y" data-at-distance="50">
+          <div class="magazines-collections__item">
+            <div class="magazines-collections__item-img img-wrap">
+              <div>
+                <picture>
+                  <source srcset="assets/images/png/magazines-collections__item-img5.webp" type="image/webp"><img src="assets/images/png/magazines-collections__item-img5.png" alt="">
+                </picture>
+              </div>
+            </div>
+            <div class="magazines-collections__item-info"> 
+              <div class="magazines-collections__item-title">Sculpture</div>
+              <div class="magazines-collections__item-price">25$</div>
+              <div class="magazines-collections__item-btn btn">Buy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="subscribe at-block">
+  <div class="subscribe__wrap">
+    <div class="subscribe__left at-element" data-at-name="atCustom" data-at-duration="2" data-at-direction="x" data-at-distance="-50">
+      <div class="subscribe__title"> 
+        <div class="subscribe__title-line">
+          <p>Subscribe</p>
+        </div>
+        <div class="subscribe__title-line subscribe__title-line--form">
+          <p>Now</p>
+          <form class="inputs" action="/action_page.php" autocomplete="off">
+            <div class="inputs__field-wrap">
+              <input class="inputs__field" type="email" placeholder="E-mail adress" name="email" autocomplete="off" required="">
+            </div>
+            <div class="inputs__btn">
+              <button class="btn" type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="subscribe__right at-element" data-at-name="atCustom" data-at-duration="2" data-at-direction="x" data-at-distance="50">
+      <div class="img-wrap">
+        <div>
+          <picture>
+            <source srcset="assets/images/png/subscribe-img.webp" type="image/webp"><img src="assets/images/png/subscribe-img.png" alt="">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </main>
+<footer class="footer">
+  <div class="center-wrap">
+    <div class="footer__wrap">
+      <div class="footer__left"><a class="footer__logo single-anchors logo" href="index.html#home" aria-label="Logo">
+          <p>Newswire<span>Newswire</span></p></a>
+        <div class="footer__socials">
+          <div class="footer__socials-title">Social</div>
+          <div class="socials"><a class="socials__link" href="#" target="_blank" aria-label="Socials link">
+              <svg class="fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path d="M12 7.6875C11.1471 7.6875 10.3133 7.94042 9.6041 8.41429C8.89492 8.88815 8.34217 9.56167 8.01577 10.3497C7.68937 11.1377 7.60397 12.0048 7.77036 12.8413C7.93676 13.6779 8.34749 14.4463 8.9506 15.0494C9.55372 15.6525 10.3221 16.0632 11.1587 16.2296C11.9952 16.396 12.8623 16.3106 13.6503 15.9842C14.4383 15.6578 15.1118 15.1051 15.5857 14.3959C16.0596 13.6867 16.3125 12.8529 16.3125 12C16.3125 10.8563 15.8581 9.75935 15.0494 8.9506C14.2406 8.14185 13.1437 7.6875 12 7.6875ZM12 15.1875C11.3696 15.1875 10.7533 15.0006 10.2291 14.6503C9.70494 14.3001 9.29639 13.8022 9.05513 13.2198C8.81388 12.6374 8.75076 11.9965 8.87375 11.3781C8.99674 10.7598 9.30032 10.1919 9.7461 9.7461C10.1919 9.30032 10.7598 8.99674 11.3781 8.87375C11.9965 8.75076 12.6374 8.81388 13.2198 9.05513C13.8022 9.29639 14.3001 9.70494 14.6503 10.2291C15.0006 10.7533 15.1875 11.3696 15.1875 12C15.185 12.8446 14.8484 13.6539 14.2512 14.2512C13.6539 14.8484 12.8446 15.185 12 15.1875ZM16.125 2.8125H7.875C6.53234 2.8125 5.24467 3.34587 4.29527 4.29527C3.34587 5.24467 2.8125 6.53234 2.8125 7.875V16.125C2.8125 17.4677 3.34587 18.7553 4.29527 19.7047C5.24467 20.6541 6.53234 21.1875 7.875 21.1875H16.125C17.4677 21.1875 18.7553 20.6541 19.7047 19.7047C20.6541 18.7553 21.1875 17.4677 21.1875 16.125V7.875C21.1875 6.53234 20.6541 5.24467 19.7047 4.29527C18.7553 3.34587 17.4677 2.8125 16.125 2.8125ZM20.0625 16.125C20.0625 17.1693 19.6477 18.1708 18.9092 18.9092C18.1708 19.6477 17.1693 20.0625 16.125 20.0625H7.875C6.83071 20.0625 5.82919 19.6477 5.09077 18.9092C4.35234 18.1708 3.9375 17.1693 3.9375 16.125V7.875C3.9375 6.83071 4.35234 5.82919 5.09077 5.09077C5.82919 4.35234 6.83071 3.9375 7.875 3.9375H16.125C17.1693 3.9375 18.1708 4.35234 18.9092 5.09077C19.6477 5.82919 20.0625 6.83071 20.0625 7.875V16.125ZM17.8125 7.125C17.8125 7.31042 17.7575 7.49168 17.6545 7.64585C17.5515 7.80002 17.4051 7.92018 17.2338 7.99114C17.0625 8.06209 16.874 8.08066 16.6921 8.04449C16.5102 8.00831 16.3432 7.91902 16.2121 7.78791C16.081 7.6568 15.9917 7.48975 15.9555 7.3079C15.9193 7.12604 15.9379 6.93754 16.0089 6.76623C16.0798 6.59493 16.2 6.44851 16.3542 6.3455C16.5083 6.24248 16.6896 6.1875 16.875 6.1875C17.1236 6.1875 17.3621 6.28627 17.5379 6.46209C17.7137 6.6379 17.8125 6.87636 17.8125 7.125Z"></path>
+              </svg></a><a class="socials__link" href="#" target="_blank" aria-label="Socials link">
+              <svg class="fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path d="M23.0155 6.53442C22.9732 6.43234 22.9017 6.345 22.81 6.28331C22.7183 6.22162 22.6104 6.18831 22.4999 6.18754H19.5374C19.1712 5.515 18.6326 4.95209 17.9768 4.55666C17.3211 4.16122 16.5718 3.94753 15.8062 3.93754C14.6557 3.93254 13.5501 4.3835 12.7313 5.19172C11.9126 5.99994 11.4473 7.09961 11.4374 8.25004V9.06567C7.4624 8.11879 4.18115 4.88442 4.14365 4.85629C4.07138 4.78494 3.98113 4.73449 3.8825 4.7103C3.78386 4.6861 3.68052 4.68906 3.58343 4.71886C3.48634 4.74866 3.39913 4.80419 3.33106 4.87955C3.26298 4.95492 3.21658 5.04731 3.19678 5.14692C2.38115 9.60942 3.72178 12.5907 4.9874 14.3063C5.65865 15.2249 6.48323 16.0209 7.4249 16.6594C5.97178 18.4219 3.58115 19.3407 3.55303 19.35C3.47315 19.3795 3.40114 19.4269 3.34261 19.4887C3.28407 19.5505 3.24058 19.6249 3.21553 19.7063C3.18892 19.7857 3.18101 19.8701 3.19239 19.953C3.20377 20.036 3.23415 20.1152 3.28115 20.1844C3.3749 20.325 4.29365 21.5625 7.4999 21.5625C14.0343 21.5625 19.4999 16.5094 20.0249 10.0219L22.8937 7.14379C22.975 7.0676 23.0304 6.9679 23.0523 6.85864C23.0741 6.74938 23.0613 6.63602 23.0155 6.53442ZM19.078 9.37504C18.9805 9.47233 18.9235 9.603 18.9187 9.74067C18.5343 15.7407 13.5187 20.4375 7.4999 20.4375C6.19678 20.4375 5.3624 20.2125 4.86553 19.9875C5.9249 19.4532 7.65928 18.4032 8.71865 16.8094C8.76086 16.7433 8.78926 16.6694 8.80215 16.5921C8.81504 16.5147 8.81215 16.4356 8.79365 16.3594C8.77367 16.2815 8.73745 16.2086 8.68737 16.1456C8.63729 16.0826 8.57447 16.0309 8.50303 15.9938C8.48428 15.9938 7.07803 15.2625 5.85928 13.5938C4.40615 11.6063 3.83428 9.17817 4.15303 6.37504C5.52178 7.53754 8.4749 9.73129 11.9062 10.3032C11.9869 10.3185 12.0701 10.3157 12.1496 10.2948C12.2291 10.274 12.303 10.2357 12.3658 10.1827C12.4287 10.1297 12.4789 10.0634 12.5129 9.98855C12.547 9.91371 12.5638 9.83223 12.5624 9.75004V8.25004C12.5698 7.40046 12.9132 6.58835 13.5175 5.9911C14.1217 5.39386 14.9378 5.06003 15.7874 5.06254C16.4013 5.0714 16.9997 5.25634 17.5116 5.59537C18.0235 5.93439 18.4272 6.41326 18.6749 6.97504C18.7177 7.0761 18.7895 7.16215 18.8814 7.22225C18.9732 7.28235 19.0808 7.31378 19.1905 7.31254H21.1405L19.078 9.37504Z"></path>
+              </svg></a><a class="socials__link" href="#" target="_blank" aria-label="Socials link">
+              <svg class="fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path d="M17.99 1.59607C16.9813 1.48906 15.9675 1.43698 14.953 1.44007C11.59 1.44007 9.50005 3.58207 9.50005 7.03007V9.37107H6.67505C6.54244 9.37107 6.41526 9.42375 6.3215 9.51752C6.22773 9.61129 6.17505 9.73846 6.17505 9.87107V13.7211C6.17505 13.8537 6.22773 13.9809 6.3215 14.0746C6.41526 14.1684 6.54244 14.2211 6.67505 14.2211H9.50005V21.9411C9.50005 22.0737 9.55273 22.2009 9.64649 22.2946C9.74026 22.3884 9.86744 22.4411 10 22.4411H13.978C14.1107 22.4411 14.2378 22.3884 14.3316 22.2946C14.4254 22.2009 14.478 22.0737 14.478 21.9411V14.2211H17.294C17.4154 14.2211 17.5327 14.177 17.624 14.097C17.7152 14.0169 17.7743 13.9064 17.79 13.7861L18.287 9.93607C18.2963 9.8655 18.2904 9.79377 18.2697 9.72568C18.249 9.65758 18.214 9.59469 18.167 9.54121C18.1201 9.48772 18.0623 9.44488 17.9974 9.41554C17.9326 9.3862 17.8622 9.37104 17.791 9.37107H14.478V7.41207C14.478 6.44207 14.673 6.03707 15.886 6.03707H17.925C18.0577 6.03707 18.1848 5.98439 18.2786 5.89062C18.3724 5.79686 18.425 5.66968 18.425 5.53707V2.09207C18.4251 1.97068 18.381 1.85341 18.301 1.76215C18.2209 1.67088 18.1104 1.61185 17.99 1.59607ZM17.425 5.03607L15.885 5.03707C13.728 5.03707 13.478 6.39307 13.478 7.41207V9.87207C13.478 10.0045 13.5306 10.1315 13.6241 10.2253C13.7177 10.319 13.8446 10.3718 13.977 10.3721H17.223L16.854 13.2221H13.978C13.8454 13.2221 13.7183 13.2747 13.6245 13.3685C13.5307 13.4623 13.478 13.5895 13.478 13.7221V21.4401H10.5V13.7221C10.5 13.5895 10.4474 13.4623 10.3536 13.3685C10.2598 13.2747 10.1327 13.2221 10 13.2221H7.17605V10.3721H10C10.1327 10.3721 10.2598 10.3194 10.3536 10.2256C10.4474 10.1319 10.5 10.0047 10.5 9.87207V7.03007C10.5 4.15607 12.165 2.44007 14.953 2.44007C15.962 2.44007 16.873 2.49507 17.425 2.54307V5.03607Z"></path>
+              </svg></a><a class="socials__link" href="#" target="_blank" aria-label="Socials link">
+              <svg class="fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path d="M21.5624 3.1218C21.3812 2.96484 21.1607 2.86011 20.9245 2.81882C20.6884 2.77754 20.4455 2.80125 20.2218 2.88742L2.9155 9.6843C2.64997 9.78717 2.42509 9.97362 2.2748 10.2155C2.12452 10.4574 2.05698 10.7416 2.08238 11.0252C2.10778 11.3089 2.22474 11.5765 2.41561 11.7879C2.60648 11.9992 2.86091 12.1427 3.1405 12.1968L7.68738 13.1062V18.7499C7.68769 19.0085 7.76437 19.2612 7.90781 19.4764C8.05125 19.6916 8.25505 19.8596 8.49363 19.9593C8.6545 20.0249 8.82619 20.0598 8.99988 20.0624C9.1724 20.0635 9.34338 20.03 9.50277 19.964C9.66216 19.898 9.80674 19.8008 9.928 19.678L12.4874 17.1187L16.3124 20.4843C16.5493 20.6967 16.8567 20.8137 17.1749 20.8124C17.312 20.8136 17.4483 20.7914 17.578 20.7468C17.7945 20.678 17.989 20.5534 18.1421 20.3855C18.2951 20.2177 18.4013 20.0125 18.4499 19.7905L21.9843 4.40617C22.0371 4.17396 22.0257 3.93174 21.9514 3.70549C21.8771 3.47924 21.7426 3.27746 21.5624 3.1218ZM3.2155 10.9218C3.20895 10.8823 3.21667 10.8417 3.23728 10.8074C3.25789 10.773 3.29005 10.7471 3.328 10.7343L17.8124 5.04367L8.11863 12.0468L3.3655 11.0905C3.32407 11.0859 3.28582 11.0661 3.25813 11.035C3.23043 11.0038 3.21525 10.9635 3.2155 10.9218ZM9.13113 18.8812C9.10513 18.9084 9.07116 18.9267 9.0341 18.9335C8.99705 18.9402 8.95881 18.935 8.92488 18.9187C8.89192 18.9043 8.86379 18.8807 8.84384 18.8508C8.8239 18.8209 8.81298 18.7859 8.81238 18.7499V13.8843L11.6343 16.378L9.13113 18.8812ZM17.3624 19.5374C17.356 19.5699 17.3411 19.6002 17.3192 19.6251C17.2973 19.6499 17.2692 19.6686 17.2377 19.679C17.2063 19.6895 17.1726 19.6915 17.1402 19.6847C17.1077 19.678 17.0776 19.6627 17.053 19.6405L9.14988 12.6843L20.8686 4.22805L17.3624 19.5374Z"></path>
+              </svg></a><a class="socials__link" href="#" target="_blank" aria-label="Socials link">
+              <svg class="stroke" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path d="M14 12L10.5 14V10L14 12Z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M2 12.7069V11.2919C2 8.3969 2 6.9489 2.905 6.0179C3.811 5.0859 5.237 5.0459 8.088 4.9649C9.438 4.9269 10.818 4.8999 12 4.8999C13.181 4.8999 14.561 4.9269 15.912 4.9649C18.763 5.0459 20.189 5.0859 21.094 6.0179C22 6.9489 22 8.3979 22 11.2919V12.7069C22 15.6029 22 17.0499 21.095 17.9819C20.189 18.9129 18.764 18.9539 15.912 19.0339C14.562 19.0729 13.182 19.0999 12 19.0999C10.6958 19.096 9.39163 19.074 8.088 19.0339C5.237 18.9539 3.811 18.9139 2.905 17.9819C2 17.0499 2 15.6019 2 12.7079V12.7069Z" stroke-width="1.2"></path>
+              </svg></a></div>
+        </div>
+      </div>
+      <div class="footer__right">
+        <nav class="footer__nav">
+          <div class="footer__nav-title">More from Newswire </div>
+          <ul class="footer__nav-list"> 
+            <li class="footer__nav-item"> <a class="footer__nav-link" href="#">About</a></li>
+            <li class="footer__nav-item"> <a class="footer__nav-link" href="#">Categories</a></li>
+            <li class="footer__nav-item"> <a class="footer__nav-link" href="#">Events</a></li>
+            <li class="footer__nav-item"> <a class="footer__nav-link" href="#">News</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__nav">
+          <div class="footer__nav-title">Contact</div>
+          <ul class="footer__nav-list"> 
+            <li class="footer__nav-item"> <a class="footer__nav-link" href="#">Advertise</a></li>
+            <li class="footer__nav-item"> <a class="footer__nav-link" href="#">Contact us</a></li>
+            <li class="footer__nav-item"> <a class="footer__nav-link" href="#">Customer care</a></li>
+            <li class="footer__nav-item"> <a class="footer__nav-link" href="#">Jobs</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="mobile-menu">
+  <div class="mobile-menu__wrap mobile-menu__wrap--left">
+    <div class="mobile-menu__top"><a class="header__logo single-anchors logo" href="index.html#home" aria-label="Logo">
+        <p>Newswire<span>Newswire</span></p></a>
+      <div class="mobile-menu__close"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6L6 18M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+      </div>
+    </div>
+    <nav class="mobile-menu__nav">
+      <ul class="mobile-menu__nav-list">
+        <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#">Categories</a></li>
+        <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="/test-ai/events.html">Events</a></li>
+        <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="/test-ai/news.html">News</a></li>
+      </ul>
+    </nav>
+    <div class="header__search">
+      <form class="inputs inputs--search" action="/action_page.php" autocomplete="off">
+        <div class="inputs__btn">
+          <button class="btn" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" fill="none">
+              <path d="M1.146 9.62498C1.146 4.94208 4.94227 1.14581 9.62516 1.14581C14.3081 1.14581 18.1043 4.94208 18.1043 9.62498C18.1043 14.3079 14.3081 18.1041 9.62516 18.1041C4.94227 18.1041 1.146 14.3079 1.146 9.62498ZM9.62516 2.52081C5.70166 2.52081 2.521 5.70148 2.521 9.62498C2.521 13.5485 5.70166 16.7291 9.62516 16.7291C13.5487 16.7291 16.7293 13.5485 16.7293 9.62498C16.7293 5.70148 13.5487 2.52081 9.62516 2.52081Z"></path>
+              <path d="M6.5463 6.08775C7.33353 5.30057 8.423 4.81248 9.62516 4.81248C10.8273 4.81248 11.9168 5.30057 12.704 6.08776C12.9725 6.35625 12.9725 6.79155 12.704 7.06004C12.4355 7.32852 12.0002 7.32852 11.7317 7.06004C11.1919 6.52017 10.448 6.18748 9.62516 6.18748C8.80231 6.18748 8.05846 6.52017 7.51854 7.06005C7.25004 7.32853 6.81474 7.32851 6.54626 7.06002C6.27779 6.79152 6.2778 6.35622 6.5463 6.08775Z"></path>
+              <path d="M14.7407 14.7405C15.0092 14.472 15.4445 14.472 15.713 14.7405L19.6021 18.6296C19.8705 18.8981 19.8705 19.3334 19.6021 19.6019C19.3336 19.8704 18.8983 19.8704 18.6298 19.6019L14.7407 15.7128C14.4722 15.4443 14.4722 15.009 14.7407 14.7405Z"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="inputs__field-wrap">
+          <input class="inputs__field" type="text" placeholder="Search" name="text" autocomplete="off" required="" minlength="2">
+        </div>
+      </form>
+    </div>
+    <div class="header__registration"> 
+      <div class="header__registration-item">Sing up</div>
+      <div class="header__registration-item">Login</div>
+    </div>
+  </div>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+  <script src="js/app.js?v=1698648903026"></script></body>
+</html>
